@@ -1,2 +1,1 @@
-# 100DaysOfCode
-#100DaysOfCode challenge to upscale my skills :)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=500&center=true&width=435&lines=Hello%2C+World!+I'm+Committing+To+The;%23100DaysOfCode+Challenge)](https://git.io/typing-svg)
