@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Cards</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="panel active"
+            style="background-image: url('https://images.unsplash.com/photo-1506064549099-34b18723e8c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXhwbG9yZSUyMHRoZSUyMHdvcmxkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60') ;">
+            <h3>Explore The World</h3>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1516571137133-1be29e37143a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZCUyMGZvcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60') ;">
+            <h3>Wild Forest</h3>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1579493933703-70473cdf84f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3VubnklMjBiZWFjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60') ;">
+            <h3>Sunny Beach</h3>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1613508788423-c15176f2f964?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWR5JTIwZGF5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60') ;">
+            <h3>Cloudy Day</h3>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1635513132528-5eb64b8ee07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80') ;">
+            <h3>Mountain Cloud</h3>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach((panel)=>{
+        panel.addEventListener('click', ()=> {
+            removeActiveClasses();
+            panel.classList.add('active');
+        })
+    })
+
+    function removeActiveClasses() {
+        panels.forEach((panels) => {
+            panels.classList.remove('active');
+        })
+    }
+</script>
+
+</html>
