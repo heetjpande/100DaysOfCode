@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box">
+        <h2>Random Password Generator</h2>
+        <input type="text" placeholder="Create Password" id="password" readonly>
+        <table>
+            <th><div id="button" class="btn1" onclick="genPassword()">Generate</div></th>
+            <th><a id="button" class="btn2" onclick="copyPassword()">Copy</a></th>
+        </table>
+    </div>
+    
+</body>
+
+<script>
+    const password = document.getElementById('password'); 
+
+    
+    function genPassword(){
+        // selecting every possible character/number/symbol to generate random password
+        const chars = '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        var passwordLength = 12;//selected length 12 to make a strong password
+
+        //using var to make a local variable
+        var password = ''
+        for (var i=0; i<= passwordLength; i++) {
+            var randomNumber = Math.floor(Math.random() * chars.length)
+            password += chars.substring(randomNumber, randomNumber + 1)
+        }
+        document.getElementById('password').value = password;
+    }
+    
+    function copyPassword(){
+
+        // this can be written for extra line of code and for understanding 
+        // var copyText = document.getElementById('password');
+
+        //used password as a constant in global scope so it's valid here as well
+        password.select()
+        password.setSelectionRange(0,999)
+        document.execCommand('copy');
+    }
+</script>
+</html>
