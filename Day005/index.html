@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+
+    #main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        margin: auto;
+        align-items: center;
+    }
+    .container{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .btn {
+        background-color: #9F68E0;
+        border: 0;
+        border-radius: 75px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 14px 40px;
+    }
+    #details{
+        padding: 20px;
+        font-size: 20px;
+    }
+    .details{
+        margin-top: 15px;
+    }
+</style>
+<body>
+
+    <div id="main">
+        <div class="container">
+            <button id="color_code" class="btn">Get Another Color</button>            <div class="details"> <p id="details"></p></div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const get_color = document.getElementById('color_code');
+    const copy = document.getElementById('copy');
+    const mainBody = document.getElementById('main');
+
+    get_color.addEventListener('click', generateColor);
+    get_color.addEventListener('click', copyText);
+
+    generateColor();
+
+    function generateColor() {
+        var symbols,colors;
+        symbols = "0123456789ABCDEF";
+        colors = "#";
+        
+        for(var i=0; i<6;i++){
+            colors = colors + symbols[Math.floor(Math.random()*16)];
+        }
+        mainBody.style.background = colors;
+        document.getElementById('details').innerHTML = 'Color Code:' + ' ' + colors+ ' ' + 'Copied ;)'; 
+        return colors;
+    }
+
+    function copyText(HTMLElement) {
+
+        if(!HTMLElement) {
+            return;
+        }
+
+        let elementText = generateColor();
+        let inputElement = document.createElement('input');
+        inputElement.setAttribute('value', elementText);
+        document.body.appendChild(inputElement);
+        inputElement.select();
+
+        document.execCommand('copy');
+
+        inputElement.parentNode.removeChild(inputElement);
+
+    }
+
+</script>
+</html>
