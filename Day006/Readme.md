@@ -10,3 +10,11 @@
   to get - getItem - JSON.parse(localstorage.getItem)
   
   
+
+# Basic concepts regarding Date and Time 
+
+? new Date() => current date //(Type object)[mm-dd-yy format]
+
+getDay() - sunday,monday etc. (indexing from 0 for sunday)
+
+getTime() - Time in sec (Time format min-hour-sec) 
