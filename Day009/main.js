@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-	const countDownDate = new Date(prompt("Enter the date in format: mm-dd-yy (eg: 11-16-22 for nov 11, 2022) ")).getTime();
+	const countDownDate = new Date(prompt("Enter the date in format: mm-dd-yy (eg: 11-16-22 for nov 16, 2022) ")).getTime();
 	// var countDownDate = new Date("Nov 16, 2022 15:37:25").getTime();
 
 	// Update the count down every 1 second
