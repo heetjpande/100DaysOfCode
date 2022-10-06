@@ -1,0 +1,30 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    color: whitesmoke;
+}
+
+body {
+    background-color: #000;
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.notice {
+    text-align: center;
+}
+
+.notice {
+    word-spacing: .6mm;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 3px solid crimson;
+}
