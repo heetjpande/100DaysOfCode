@@ -6,7 +6,7 @@
 
 See Them Live - 
 
-### [Day001](https://tourmaline-queijadas-62e1b4.netlify.app/day001/index.html)
+### [Day001](https://tourmaline-queijadas-62e1b4.netlify.app/day001/index.html){:target="_blank"}
 ### [Day002](https://tourmaline-queijadas-62e1b4.netlify.app/day002/index.html)
 ### [Day003](https://tourmaline-queijadas-62e1b4.netlify.app/day003/index.html)
 ### [Day004](https://tourmaline-queijadas-62e1b4.netlify.app/day004/index.html)
